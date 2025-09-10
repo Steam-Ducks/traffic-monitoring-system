@@ -64,7 +64,7 @@ O objetivo do projeto é construir um sistema de monitoramento contínuo do trá
 | Fase                     | Início     | Entrega    | Status | Documentação |
 |--------------------------|------------|------------|--------|--------------| 
 | Kick off                 | 25/08/2025 | 29/08/2025 | ✅      | -            |
-| Sprint 1                 | 08/09/2025 | 28/09/2025 | 🔄     | [📋 Sprint 1](./documentation/sprint1.md) |
+| Sprint 1                 | 08/09/2025 | 28/09/2025 | 🔄     | [📋 Sprint 1](./documentation/sprint-backlog.md) |
 | Sprint Review / Planning | 29/09/2025 | 03/10/2025 | ❌      | -            |
 | Sprint 2                 | 06/10/2025 | 26/10/2025 | ❌      | -            |
 | Sprint Review / Planning | 27/10/2025 | 31/10/2025 | ❌      | -            |
