@@ -8,7 +8,7 @@
 <div align="center">
 <img src="../assets/header.png" alt="capa-readme" width="100%" />
 </div>
-ass
+
 # User Stories das Sprint
 
 <details>
