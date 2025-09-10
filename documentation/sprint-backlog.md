@@ -18,107 +18,116 @@ ass
 
 | Rank | Prioridade | ID | User Story | Estimativa | Sprint | Requisito do parceiro |
 |------|------------|----|------------|------------|--------|-----------------------|
-| 1 | ALTA | PS-1 | Como administrador, quero que o sistema armazene no banco de dados os dados de tráfego, regiões e indicadores, para garantir a persistência das informações e permitir análises futuras. | - | 1 | - |
+| 1 | ALTA | PS-1 | Como Administrador, quero que o sistema consulte novos dados a cada 10 minutos para que sejam exibidos os dados mais recentes. | 8 | 1 | RF1 |
 
 ### Requisitos
-- O sistema armazena dados de tráfego, regiões e indicadores no banco de dados.
-- Garante a persistência das informações.
-- Permite análises futuras.
+- O sistema realiza novas consultas periodicamente utilizando uma API simulada da prefeitura.
+- Processamento e validação dos dados recebidos.
+- Armazenamento dos dados processados no banco de dados.
+- Remoção dos dados antigos conforme novas consultas são feitas.
+- Garantia da atualização constante das informações.
 
 ### Definition of ready:
 - Estrutura de banco definida (tabelas, chaves primárias e estrangeiras).
-- Dados de teste disponíveis.
+- Endpoint da API das câmeras identificados e documentados.
+- Modelo de processamento de dados definido.
 
 ### Definition of done:
-- CRUD de dados implementado.
-- Testes de inserção e atualização realizados com sucesso.
-- Persistência validada em ambiente de teste.
+- API de consulta às câmeras implementada e funcionando.
+- Processamento de dados validado.
+- Persistência no banco de dados funcionando.
+- Testes de integração realizados com sucesso.
+- Atualização em tempo real validada.
 
 ## Regras de Negócio
 
-| Definições do Cliente |
-|---------------------------------------------------------------------------------------------------------------------|
-| Dados de tráfego, regiões e indicadores salvos de forma consistente no banco. |
-| Histórico mantido para consultas futuras. |
-| Operações de leitura e escrita funcionando sem perda de dados. |
+| Definições do Cliente                                                                               |
+|-----------------------------------------------------------------------------------------------------|
+| Dados das câmeras atualizados de 10 em 10 minutos → sistema sempre trabalha com informações atuais. |
+| Falha na consulta → sistema utiliza últimos dados válidos disponíveis.                              |
 
 ---
 
 | Rank | Prioridade | ID | User Story | Estimativa | Sprint | Requisito do parceiro |
 |------|------------|----|------------|------------|--------|-----------------------|
-| 2 | ALTA | PS-2 | Como gestor, quero visualizar o índice geral da cidade em um card destacado com cores de alerta, para ter uma visão rápida da situação do tráfego. | - | 1 | - |
+| 2 | ALTA | PS-2 | Como Gestor, quero visualizar o índice geral da cidade em um card destacado com cores de alerta para ter uma visão rápida da situação do tráfego. | 8 | 1 | RF2, RF3 |
+
 
 ### Requisitos
 - O card exibe o índice geral calculado a partir de todas as regiões.
 - A cor do card muda conforme o nível crítico (verde, amarelo, vermelho).
-- Atualização em tempo quase real.
+- Atualização em tempo real.
 
 ### Definition of ready:
 - Fórmula de cálculo do índice definida.
-- Layout do card aprovado.
+- Layout do card aprovado no Figma.
+- Critérios de cores por nível estabelecidos.
 
 ### Definition of done:
-- Card exibe índice corretamente.
+- Card exibe índice corretamente calculado.
+- Cores mudam automaticamente conforme nível.
 - Atualização validada em testes de simulação.
 
 ## Regras de Negócio
 
 | Definições do Cliente |
 |---------------------------------------------------------------------------------------------------------------------|
-| Alteração de indicadores regionais → índice geral recalculado e card atualizado. |
-| Nível crítico → card exibe cor correta. |
+| Alteração de indicadores regionais → índice geral recalculado e card atualizado automaticamente. |
+| Cores dos niveis seguem de verde a amarelo sendo 5 niveis totais. |
 
 ---
 
 | Rank | Prioridade | ID | User Story | Estimativa | Sprint | Requisito do parceiro |
 |------|------------|----|------------|------------|--------|-----------------------|
-| 3 | ALTA | PS-3 | Como gestor, quero visualizar cards individuais das minhas regiões com níveis atualizados, para identificar rapidamente áreas problemáticas. | - | 1 | - |
+| 3 | ALTA | PS-3 | Como Gestor, quero visualizar cards individuais das minhas regiões com níveis atualizados para identificar rapidamente áreas problemáticas. | 5 | 1 | RF3, RF4 |
 
 ### Requisitos
-- Cada card exibe o nível da respectiva região.
-- Cores indicam o estado da região.
-- Cards possuem link para detalhes.
+- Cada card exibe o nível da respectiva região atribuída ao gestor.
+- Cores indicam o estado da região (verde, amarelo, vermelho).
 
 ### Definition of ready:
-- Lista de regiões do gestor disponível.
-- Layout dos cards aprovado.
+- Lista de regiões do gestor disponível no banco.
+- Layout dos cards aprovado no Figma.
+- Dados de teste para múltiplas regiões disponíveis.
 
 ### Definition of done:
 - Cards atualizam automaticamente ao alterar dados de região.
-- Links para detalhes funcionando.
+- Cores aplicadas conforme regras de negócio.
 
 ## Regras de Negócio
 
 | Definições do Cliente |
 |---------------------------------------------------------------------------------------------------------------------|
-| Região com nível normal → card verde. |
-| Região com nível crítico → card vermelho. |
+| Cores dos niveis seguem de verde a amarelo sendo 5 niveis totais. |
+| Cards são atualizados idependentemente uns dos outros. |
 
 ---
 
 | Rank | Prioridade | ID | User Story | Estimativa | Sprint | Requisito do parceiro |
 |------|------------|----|------------|------------|--------|-----------------------|
-| 4 | MÉDIA | PS-4 | Como administrador, quero cadastrar gestores locais e atribuí-los a regiões específicas, para distribuir responsabilidades de monitoramento. | - | 1 | - |
+| 4 | ALTA | PS-4 | Como Gestor, quero visualizar um mapa básico da cidade com regiões coloridas conforme níveis para análise geográfica. | 8 | 1 | RF4 |
 
 ### Requisitos
-- CRUD de gestores implementado.
-- Cada gestor pode ser atribuído a uma ou mais regiões.
-- Permissões aplicadas corretamente.
+- Mapa exibe divisões geográficas das regiões da cidade.
+- Cada região é colorida conforme seu nível atual.
+- Interface básica de navegação no mapa (zoom).
 
 ### Definition of ready:
-- Estrutura de permissões definida.
-- Lista de regiões disponível.
+- Base cartográfica da cidade carregada.
+- Divisões das regiões georreferenciadas.
+- Dados de teste com níveis por região disponíveis.
+- Layout do componente de mapa aprovado.
 
 ### Definition of done:
-- Gestores cadastrados e vinculados às regiões com sucesso.
-- Permissões validadas em teste.
+- Mapa carrega corretamente com todas as regiões.
+- Cores refletem níveis em tempo real.
+- Navegação básica (zoom) funcionando.
 
 ## Regras de Negócio
 
 | Definições do Cliente |
 |---------------------------------------------------------------------------------------------------------------------|
-| Cadastro de novo gestor → aparece na lista. |
-| Alteração de regiões atribuídas → refletida no sistema. |
+| Alteração de nível de região → cor da região no mapa muda automaticamente. |
 
 ---
 
