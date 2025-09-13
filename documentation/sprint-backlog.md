@@ -20,31 +20,30 @@
 |------|------------|----|------------|------------|--------|-----------------------|
 | 1 | ALTA | PS-1 | Como Administrador, quero que o sistema consulte novos dados a cada 10 minutos para que sejam exibidos os dados mais recentes. | 8 | 1 | RF1 |
 
-### Requisitos
-- O sistema realiza novas consultas periodicamente utilizando uma API simulada da prefeitura.
-- Processamento e validação dos dados recebidos.
-- Armazenamento dos dados processados no banco de dados.
-- Remoção dos dados antigos conforme novas consultas são feitas.
-- Garantia da atualização constante das informações.
+### Meta de Entrega
+Manter o sistema constantemente atualizado com os dados mais recentes, sem necessidade de ação de nenhum usuário.
 
-### Definition of ready:
+### Indicadores
+- Consultas realizadas a cada 10 minutos.
+- Banco de dados reflete apenas os dados de consulta mais recentes.
+- Em caso de falha, os dados da última consulta bem-sucedida são mantidos.
+
+### Regras de negócio
+- Os dados consumidos não devem ser mantidos a longo prazo -> sistema não duplica a base de registro das câmeras.
+- Dados atualizados de 10 em 10 minutos -> sempre exibindo a situação atual do trânsito na cidade.
+
+### Definition of Ready:
 - Estrutura de banco definida (tabelas, chaves primárias e estrangeiras).
 - Endpoint da API das câmeras identificados e documentados.
 - Modelo de processamento de dados definido.
 
-### Definition of done:
+### Definition of Done:
 - API de consulta às câmeras implementada e funcionando.
 - Processamento de dados validado.
 - Persistência no banco de dados funcionando.
 - Testes de integração realizados com sucesso.
 - Atualização em tempo real validada.
 
-## Regras de Negócio
-
-| Definições do Cliente                                                                               |
-|-----------------------------------------------------------------------------------------------------|
-| Dados das câmeras atualizados de 10 em 10 minutos → sistema sempre trabalha com informações atuais. |
-| Falha na consulta → sistema utiliza últimos dados válidos disponíveis.                              |
 
 ---
 
@@ -52,28 +51,29 @@
 |------|------------|----|------------|------------|--------|-----------------------|
 | 2 | ALTA | PS-2 | Como Gestor, quero visualizar o índice geral da cidade em um card destacado com cores de alerta para ter uma visão rápida da situação do tráfego. | 8 | 1 | RF2, RF3 |
 
+### Meta de Entrega
+Fornecer aos gestores e a população uma visualização rápida e clara da situação do tráfego na cidade.
 
-### Requisitos
-- O card exibe o índice geral calculado a partir de todas as regiões.
-- A cor do card muda conforme o nível crítico (verde, amarelo, vermelho).
-- Atualização em tempo real.
+### Indicadores
+- Nível é calculado com base em todas as regiões da cidade.
+- Card muda de cor automaticamente de acordo com o nível calculado.
 
-### Definition of ready:
-- Fórmula de cálculo do índice definida.
+## Regras de Negócio
+- Alteração de indicadores regionais → índice geral recalculado e card atualizado automaticamente.
+- Níveis seguem uma numeração de 1 a 5, e possuem cores atribuídas (Verde - Amarelo - Laranja - Vermelho - Roxo).
+
+### Definition of Ready:
+- Fórmula de cálculo do acúmulo das regiões gerando o nível da cidade definida.
 - Layout do card aprovado no Figma.
 - Critérios de cores por nível estabelecidos.
 
-### Definition of done:
+### Definition of Done:
 - Card exibe índice corretamente calculado.
-- Cores mudam automaticamente conforme nível.
+- Cores seguem o nível.
+- Nível da cidade sempre reflete o acúmulo das regiões.
 - Atualização validada em testes de simulação.
 
-## Regras de Negócio
 
-| Definições do Cliente |
-|---------------------------------------------------------------------------------------------------------------------|
-| Alteração de indicadores regionais → índice geral recalculado e card atualizado automaticamente. |
-| Cores dos niveis seguem de verde a amarelo sendo 5 niveis totais. |
 
 ---
 
@@ -81,25 +81,30 @@
 |------|------------|----|------------|------------|--------|-----------------------|
 | 3 | ALTA | PS-3 | Como Gestor, quero visualizar cards individuais das minhas regiões com níveis atualizados para identificar rapidamente áreas problemáticas. | 5 | 1 | RF3, RF4 |
 
-### Requisitos
-- Cada card exibe o nível da respectiva região atribuída ao gestor.
-- Cores indicam o estado da região (verde, amarelo, vermelho).
+### Meta de Entrega
+Permitir que gestores e a população monitorem o tráfego de regiões específicas da cidade separadamente.
 
-### Definition of ready:
-- Lista de regiões do gestor disponível no banco.
+### Indicadores
+- Nível é calculado com base em uma série de indicadores pré-definidos.
+- Cada card representa o nível de sua região associada.
+
+### Regras de negócio
+- Ao receber novos dados das câmeras de trânsito, indicadores por região são recalculados e geram um novo nível para cada região.
+- Cada região tem seu próprio nível independente dos outros e de fácil identificação.
+- Níveis seguem uma numeração de 1 a 5, e possuem cores atribuídas (Verde - Amarelo - Laranja - Vermelho - Roxo).
+
+### Definition of Ready:
+- Regiões da cidade definidas e delimitadas.
+- Fórmula de cálculo dos indicadores definida.
+- Fórmula de acúmulo dos indicadores em um nível de 1 a 5.
 - Layout dos cards aprovado no Figma.
 - Dados de teste para múltiplas regiões disponíveis.
 
-### Definition of done:
-- Cards atualizam automaticamente ao alterar dados de região.
+### Definition of Done:
+- Cards exibem os níveis corretamente calculados.
 - Cores aplicadas conforme regras de negócio.
-
-## Regras de Negócio
-
-| Definições do Cliente |
-|---------------------------------------------------------------------------------------------------------------------|
-| Cores dos niveis seguem de verde a amarelo sendo 5 niveis totais. |
-| Cards são atualizados idependentemente uns dos outros. |
+- Cada nível representa um acúmulo dos indicadores individuais.
+- Atualização validada em testes de simulação.
 
 ---
 
@@ -107,27 +112,29 @@
 |------|------------|----|------------|------------|--------|-----------------------|
 | 4 | ALTA | PS-4 | Como Gestor, quero visualizar um mapa básico da cidade com regiões coloridas conforme níveis para análise geográfica. | 8 | 1 | RF4 |
 
-### Requisitos
+### Meta de Entrega
+Permitir análise geográfica das condições de tráfego por região, facilitando a tomada de decisões e associação de um nível a um local.
+
+### Indicadores
 - Mapa exibe divisões geográficas das regiões da cidade.
 - Cada região é colorida conforme seu nível atual.
-- Interface básica de navegação no mapa (zoom).
 
-### Definition of ready:
+### Regras de negócio
+- Divisão das regiões segue mapa da prefeitura de São José dos Campos.
+- Níveis seguem uma numeração de 1 a 5, e possuem cores atribuídas (Verde - Amarelo - Laranja - Vermelho - Roxo).
+
+### Definition of Ready:
 - Base cartográfica da cidade carregada.
 - Divisões das regiões georreferenciadas.
 - Dados de teste com níveis por região disponíveis.
 - Layout do componente de mapa aprovado.
 
-### Definition of done:
+### Definition of Done:
 - Mapa carrega corretamente com todas as regiões.
-- Cores refletem níveis em tempo real.
-- Navegação básica (zoom) funcionando.
+- Cores das regiões refletem níveis em tempo real.
+- Interações com o mapa exibem mais detalhes da região.
+- Atualização validada em testes de simulação.
 
-## Regras de Negócio
-
-| Definições do Cliente |
-|---------------------------------------------------------------------------------------------------------------------|
-| Alteração de nível de região → cor da região no mapa muda automaticamente. |
 
 ---
 
