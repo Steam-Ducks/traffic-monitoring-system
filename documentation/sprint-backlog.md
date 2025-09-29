@@ -16,9 +16,9 @@
 
 ## User Stories da Sprint
 
-| Rank | Prioridade | ID | User Story | Estimativa | Sprint | Requisito do parceiro |
-|------|------------|----|------------|------------|--------|-----------------------|
-| 1 | ALTA | PS-1 | Como Administrador, quero que o sistema consulte novos dados a cada 10 minutos para que sejam exibidos os dados mais recentes. | 8 | 1 | RF1 |
+| Rank | Prioridade | User Story | Estimativa | Sprint | Requisito do parceiro |
+|------|------------|------------|------------|--------|-----------------------|
+| 1 | ALTA | Como Administrador, quero que o sistema consulte novos dados a cada 10 minutos para que sejam exibidos os dados mais recentes. | 8 | 1 | RF1 |
 
 ### Meta de Entrega
 Manter o sistema constantemente atualizado com os dados mais recentes, sem necessidade de ação de nenhum usuário.
@@ -47,9 +47,9 @@ Manter o sistema constantemente atualizado com os dados mais recentes, sem neces
 
 ---
 
-| Rank | Prioridade | ID | User Story | Estimativa | Sprint | Requisito do parceiro |
-|------|------------|----|------------|------------|--------|-----------------------|
-| 2 | ALTA | PS-2 | Como Gestor, quero visualizar o índice geral da cidade em um card destacado com cores de alerta para ter uma visão rápida da situação do tráfego. | 8 | 1 | RF2, RF3 |
+| Rank | Prioridade | User Story | Estimativa | Sprint | Requisito do parceiro |
+|------|------------|------------|------------|--------|-----------------------|
+| 2 | ALTA | Como Gestor, quero visualizar o índice geral da cidade em um card destacado com cores de alerta para ter uma visão rápida da situação do tráfego. | 8 | 1 | RF2, RF3 |
 
 ### Meta de Entrega
 Fornecer aos gestores e a população uma visualização rápida e clara da situação do tráfego na cidade.
@@ -77,9 +77,9 @@ Fornecer aos gestores e a população uma visualização rápida e clara da situ
 
 ---
 
-| Rank | Prioridade | ID | User Story | Estimativa | Sprint | Requisito do parceiro |
-|------|------------|----|------------|------------|--------|-----------------------|
-| 3 | ALTA | PS-3 | Como Gestor, quero visualizar cards individuais das minhas regiões com níveis atualizados para identificar rapidamente áreas problemáticas. | 5 | 1 | RF3, RF4 |
+| Rank | Prioridade | User Story | Estimativa | Sprint | Requisito do parceiro |
+|------|------------|------------|------------|--------|-----------------------|
+| 3 | ALTA | Como Gestor, quero visualizar cards individuais das minhas regiões com níveis atualizados para identificar rapidamente áreas problemáticas. | 5 | 1 | RF3, RF4 |
 
 ### Meta de Entrega
 Permitir que gestores e a população monitorem o tráfego de regiões específicas da cidade separadamente.
@@ -108,9 +108,9 @@ Permitir que gestores e a população monitorem o tráfego de regiões específi
 
 ---
 
-| Rank | Prioridade | ID | User Story | Estimativa | Sprint | Requisito do parceiro |
-|------|------------|----|------------|------------|--------|-----------------------|
-| 4 | ALTA | PS-4 | Como Gestor, quero visualizar um mapa básico da cidade com regiões coloridas conforme níveis para análise geográfica. | 8 | 1 | RF4 |
+| Rank | Prioridade | User Story | Estimativa | Sprint | Requisito do parceiro |
+|------|------------|------------|------------|--------|-----------------------|
+| 4 | ALTA | Como Gestor, quero visualizar um mapa básico da cidade com regiões coloridas conforme níveis para análise geográfica. | 8 | 1 | RF4 |
 
 ### Meta de Entrega
 Permitir análise geográfica das condições de tráfego por região, facilitando a tomada de decisões e associação de um nível a um local.
@@ -148,194 +148,121 @@ Permitir análise geográfica das condições de tráfego por região, facilitan
 
 ## User Stories da Sprint
 
-| Rank | Prioridade | ID | User Story | Estimativa | Sprint | Requisito do parceiro |
-|------|------------|----|------------|------------|--------|-----------------------|
-| 5 | ALTA | PS-5 | Como gestor, quero visualizar um mapa interativo da cidade com cores por região e filtros por período, para analisar o tráfego geograficamente. | - | 2 | - |
+| Rank | Prioridade | User Story | Estimativa | Sprint | Requisito do parceiro |
+|------|------------|------------|------------|--------|-----------------------|
+| 5 | ALTA | Como Gestor, quero poder interagir com o mapa aplicando filtros por região para analisar localidades com mais precisão | 8 | 2 | RF4 |
 
-### Requisitos
-- O mapa exibe regiões com cores representando o nível atual.
-- Filtros aplicáveis por região, período e indicador.
-- Atualização em tempo real.
+### Meta de Entrega
+Permitir que usuários usem o mapa de forma interativa e consigam entender melhor a situação de regiões específicas.
+
+### Indicadores
+- Ao clicar em uma região no mapa, a tela é movida para uma sessão que exibe um resumo dos indicadores.
+- A sessão dos indicadores exibe os dados referentes a região selecionada.
+
+### Regras de negócio
+- Tela com os indicadores detalhados fica logo a baixo do mapa
+- O clique em uma regiao apenas atualiza os indicadores, sem recarregar a página e abaixa a tela.
+- O usuário consegue facilmente voltar ao mapa para selecionar outra região.
 
 ### Definition of ready:
-- Base cartográfica carregada.
-- Dados georreferenciados disponíveis.
+- Mapa consegue identificar qual região foi clicada.
+- Layout da sessão de detalhes definida.
 
 ### Definition of done:
-- Filtros funcionando corretamente.
-- Cores refletem níveis em tempo real.
-
-## Regras de Negócio
-
-| Definições do Cliente |
-|---------------------------------------------------------------------------------------------------------------------|
-| Aplicar filtro por período → mapa atualiza. |
-| Alteração de nível → cor da região no mapa muda. |
+- Clique em região atualiza os indicadores corretamente.
+- Tela rola suavemente para a sessão de detalhes.
+- Usuário consegue voltar ao mapa e selecionar outra região.
 
 ---
 
-| Rank | Prioridade | ID | User Story | Estimativa | Sprint | Requisito do parceiro |
-|------|------------|----|------------|------------|--------|-----------------------|
-| 6 | ALTA | PS-6 | Como gestor, quero receber alertas automáticos quando níveis críticos forem atingidos, para reagir rapidamente a emergências. | - | 2 | - |
+| Rank | Prioridade | User Story | Estimativa | Sprint | Requisito do parceiro |
+|------|------------|------------|------------|--------|-----------------------|
+| 6 | ALTA | Como gestor, quero receber alertas automáticos quando níveis críticos forem atingidos, para reagir rapidamente a emergências. | - | 2 | - |
 
-### Requisitos
-- Alerta disparado em nível crítico.
-- Alerta contém região, indicador e nível.
+### Meta de Entrega
+Permitir que gestores ajam rapidamente em situações críticas de tráfego, sem precisar monitorar constantemente o sistema.
+
+### Indicadores
+- Alertas são enviados para o celular cadastrado do gestor.
+- Alertas contêm informações claras sobre a situação crítica.
+- Alertas são enviados quando um nível crítico é atingido em qualquer região.
+
+### Regras de negócio
+- Níveis 4 e 5 disparam alertas automáticos.
+- Nível volta para 3 ou menos, alerta de normalização é enviado.
+- Alertas só são enviados quando a situação muda, evitando spam.
+- Alertas contêm região e nível atingido.
+- Alertas são enviados via aplicativo de mensagens.
 
 ### Definition of ready:
-- Critérios de alerta definidos.
-- Canal de envio configurado (e-mail ou push).
+- Mensagem de alerta definida.
+- Metodo de envio de alerta validado.
+- Criação de gestores com celular cadastrado.
+- Protocolos de envio de mensagem definidos.
 
 ### Definition of done:
-- Alertas disparados e recebidos corretamente.
-- Histórico de alertas armazenado.
-
-## Regras de Negócio
-
-| Definições do Cliente |
-|---------------------------------------------------------------------------------------------------------------------|
-| Nível sobe para crítico → alerta enviado. |
-| Nível normalizado → alerta de normalização enviado. |
+- Alertas são enviados corretamente quando níveis críticos são atingidos.
+- Histórico de alertas armazenado no banco de dados.
+- Mensagens não são enviadas repetidamente para o mesmo evento.
 
 ---
 
-| Rank | Prioridade | ID | User Story | Estimativa | Sprint | Requisito do parceiro |
-|------|------------|----|------------|------------|--------|-----------------------|
-| 7 | MÉDIA | PS-7 | Como administrador, quero configurar regras de alerta personalizadas por indicador e região, para automatizar notificações críticas. | - | 2 | - |
+| Rank | Prioridade | User Story | Estimativa | Sprint | Requisito do parceiro |
+|------|------------|------------|------------|--------|-----------------------|
+| 7 | MÉDIA | Como Gestor, quero acessar uma seção de indicadores detalhados que compõem a nota geral e local, para entender o que está impactando o nível | 5 | 2 | RF2 |
 
-### Requisitos
-- Regras criadas, editadas e excluídas.
-- Notificação respeita regras configuradas.
+### Meta de Entrega
+Fornecer detalhes dos indicadores que comporam o nível gerado, permitindo análises mais profundas.
 
-### Definition of ready:
-- Lista de indicadores disponível.
-- Critérios de alerta documentados.
+### Indicadores
+- Cada indicador é exibido com seu valor atual e histórico.
+- Região exibida é a mesma selecionada no mapa.
 
-### Definition of done:
-- Regras configuráveis e testadas.
-- Alertas funcionam conforme configuração.
-
-## Regras de Negócio
-
-| Definições do Cliente |
-|---------------------------------------------------------------------------------------------------------------------|
-| Criar regra → alerta dispara corretamente. |
-| Desativar regra → alerta não dispara. |
-
----
-
-| Rank | Prioridade | ID | User Story | Estimativa | Sprint | Requisito do parceiro |
-|------|------------|----|------------|------------|--------|-----------------------|
-| 8 | MÉDIA | PS-8 | Como gestor, quero acessar indicadores detalhados que compõem a nota geral e local, para entender o que está impactando o nível. | - | 2 | - |
-
-### Requisitos
-- Exibição de indicadores individuais com histórico.
-- Filtros por região e período funcionando.
+### Regras de negócio
+- Um ícone de informação fornece uma breve descrição do indicador.
+- Dados históricos são exibidos para comparação.
+- Região exibida é alterada automaticamente conforme seleção no mapa.
 
 ### Definition of ready:
+- Indicadores detalhados definidos.
+- Layout do gráfico de exibição de cada indicador.
 - Dados históricos disponíveis.
-- Layout aprovado.
+- Região selecionada no mapa é identificada pelo sistema.
 
 ### Definition of done:
-- Indicadores detalhados exibidos corretamente.
-- Filtros aplicando alterações.
-
-## Regras de Negócio
-
-| Definições do Cliente |
-|---------------------------------------------------------------------------------------------------------------------|
-| Filtro por região → indicadores atualizam. |
-| Alteração de indicador recalcula nível local. |
+- Indicadores populam corretamente seus gráficos.
+- Ao selecionar uma região no mapa, os indicadores atualizam automaticamente.
+- Ícones de informação exibem descrições corretas.
 
 ---
 
-</details>
+| Rank | Prioridade | User Story | Estimativa | Sprint | Requisito do parceiro |
+|------|------------|------------|-----------|--------|-----------------------|
+| 8 | MÉDIA | Como Administrador, quero cadastrar gestores locais no sistema e atribuí-los a regiões específicas para distribuir responsabilidades de monitoramento | 5  | 2 | RF6                   |
 
+### Meta de Entrega
+Permitir que administradores criem gestores locais que são designados a regiões específicas para receber alertas e monitorar o tráfego.
 
+### Indicadores
+- Administradores podem criar, editar e deletar gestores.
+- Gestores são associados a regiões específicas.
+- Alertas são enviados para todos os gestores vinculados a região afetada.
 
-
-<details>
-<summary>Sprint 3</summary>
-
-## User Stories da Sprint
-
-| Rank | Prioridade | ID | User Story | Estimativa | Sprint | Requisito do parceiro |
-|------|------------|----|------------|------------|--------|-----------------------|
-| 9 | BAIXA | PS-9 | Como administrador, quero permitir a integração de dados externos, para enriquecer as análises com dados complementares. | - | 3 | - |
-
-### Requisitos
-- Dados externos validados antes de integrar.
-- Indicadores recalculados após integração.
+### Regras de negócio
+- Gestores podem ser associados a múltiplas regiões.
+- Administradores têm acesso a uma interface de gerenciamento de gestores.
+- Gestores recebem alertas apenas para as regiões às quais estão vinculados.
 
 ### Definition of ready:
-- Endpoints de API disponíveis.
-- Dados de teste providos.
+- Interface de gerenciamento de gestores definida.
 
 ### Definition of done:
-- Integração funcionando e validada.
-- Recalculo automático dos indicadores.
-
-## Regras de Negócio
-
-| Definições do Cliente |
-|---------------------------------------------------------------------------------------------------------------------|
-| API externa retorna dados válidos → sistema integra. |
-| API externa indisponível → erro tratado. |
+- Administradores conseguem criar, editar e deletar gestores.
+- Gestores são corretamente associados a regiões.
+- Alertas são enviados para gestores vinculados às regiões afetadas.
 
 ---
-
-| Rank | Prioridade | ID | User Story | Estimativa | Sprint | Requisito do parceiro |
-|------|------------|----|------------|------------|--------|-----------------------|
-| 10 | BAIXA | PS-10 | Como cidadão, quero acessar um portal público com mapa simplificado e índice geral da cidade sem login, para acompanhar a situação do tráfego. | - | 3 | - |
-
-### Requisitos
-- Apenas dados resumidos exibidos.
-- Nenhum dado sensível exposto.
-- Filtros simples por região ou indicador.
-
-### Definition of ready:
-- Layout do portal aprovado.
-- Dados resumidos disponíveis.
-
-### Definition of done:
-- Portal funcionando corretamente.
-- Testes realizados para garantir que dados sensíveis não vazem.
-
-## Regras de Negócio
-
-| Definições do Cliente |
-|---------------------------------------------------------------------------------------------------------------------|
-| Página abre → mapa e índice carregam. |
-| Filtro aplicado → mapa atualizado. |
-
----
-
-| Rank | Prioridade | ID | User Story | Estimativa | Sprint | Requisito do parceiro |
-|------|------------|----|------------|------------|--------|-----------------------|
-| 11 | MÉDIA | PS-11 | Como administrador, quero gerenciar usuários do sistema (criar, editar, desativar), para controlar quem tem acesso às funcionalidades. | - | 3 | - |
-
-### Requisitos
-- Criar, editar, desativar usuários funcionando.
-- Permissões aplicadas corretamente.
-
-### Definition of ready:
-- Perfis e permissões definidos.
-
-### Definition of done:
-- CRUD funcionando e validado.
-- Permissões aplicadas corretamente em testes.
-
-## Regras de Negócio
-
-| Definições do Cliente |
-|---------------------------------------------------------------------------------------------------------------------|
-| Criar usuário → acesso liberado. |
-| Desativar usuário → acesso bloqueado. |
-
----
-
 </details>
 
 </body>
 </html>
-
