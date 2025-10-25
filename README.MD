@@ -2,7 +2,7 @@
 
 Portal para consolidação de indicadores de mobilidade, atribui **níveis por região** e dispara **alertas vinculados a protocolos de ação**. Projeto proposto para atender a Prefeitura de São José dos Campos.
 
-<p align="center"> <a href="#integrantes-da-equipe">👥 Integrantes da Equipe</a> • <a href="#descricao-do-desafio">📝 Descrição do Desafio</a> • <a href="#objetivo-do-projeto">🎯 Objetivo do Projeto</a> • <a href="#requisitos-funcionais">📋 Requisitos Funcionais</a> • <a href="#cronograma">📅 Cronograma</a> • <a href="#backlog-do-produto">🗂️ Backlog do Produto</a> • <a href="#dor">🏃‍ DoR</a> • <a href="#dod">🏆 DoD</a> • <a href="#indicadores-e-notas">📊 Indicadores & Notas</a> • <a href="#alertas-e-protocolos">🚨 Alertas & Protocolos</a> • <a href="#documentacao">📚 Documentação</a> • <a href="#tecnologias-utilizadas">🛠️ Tecnologias Utilizadas</a> </p>
+<p align="center"> <a href="#integrantes-da-equipe">👥 Integrantes da Equipe</a> • <a href="#descricao-do-desafio">📝 Descrição do Desafio</a> • <a href="#objetivo-do-projeto">🎯 Objetivo do Projeto</a> • <a href="#requisitos-funcionais">📋 Requisitos Funcionais</a> • <a href="#cronograma">📅 Cronograma</a> • <a href="#backlog-do-produto">🗂️ Backlog do Produto</a> • <a href="#dor">🏃‍ DoR</a> • <a href="#dod">🏆 DoD</a> • <a href="#indicadores-e-notas">📊 Indicadores & Notas</a> • <a href="#alertas-e-protocolos">🚨 Alertas & Protocolos</a> • <a href="#documentacao">📚 Documentação</a> • <a href="#boas-praticas">📋 Boas Práticas</a> • <a href="#tecnologias-utilizadas">🛠️ Tecnologias Utilizadas</a> </p>
 
 <br>
 <br><div style="display: flex; justify-content: center; gap: 80px; align-items: center; margin-top: 20px; margin-bottom: 20px;">
@@ -61,16 +61,16 @@ O objetivo do projeto é construir um sistema de monitoramento contínuo do trá
 
 ## 📆 <a id="cronograma">Cronograma</a>
 
-| Fase                     | Início     | Entrega    | Status | Documentação |
-|--------------------------|------------|------------|--------|--------------| 
-| Kick off                 | 25/08/2025 | 29/08/2025 | ✅      | -            |
-| Sprint 1                 | 08/09/2025 | 28/09/2025 | ✅     | [📋 Sprint 1](./documentation/sprint-backlog.md) |
-| Sprint Review / Planning | 29/09/2025 | 03/10/2025 | 🔄      | -            |
-| Sprint 2                 | 06/10/2025 | 26/10/2025 | 🔄      | -            |
-| Sprint Review / Planning | 27/10/2025 | 31/10/2025 | ❌      | -            |
-| Sprint 3                 | 03/11/2025 | 23/11/2025 | ❌      | -            |
-| Sprint review            | 24/11/2025 | 28/11/2025 | ❌      | -            |
-| Feira de Soluções        | 04/12/2025 | 04/12/2025 | ❌      | -            |
+| Fase                     | Início     | Entrega    | Status | Documentação                                     |
+|--------------------------|------------|------------|--------|--------------------------------------------------| 
+| Kick off                 | 25/08/2025 | 29/08/2025 | ✅      | -                                                |
+| Sprint 1                 | 08/09/2025 | 28/09/2025 | ✅      | [📋 Sprint 1](./documentation/sprint-backlog.md#sprint-1) |
+| Sprint Review / Planning | 29/09/2025 | 03/10/2025 | ✅      | -                                                |
+| Sprint 2                 | 06/10/2025 | 26/10/2025 | ✅      | [📋 Sprint 2](./documentation/sprint-backlog.md#sprint-2) |
+| Sprint Review / Planning | 27/10/2025 | 31/10/2025 | 🔄      | -                                                |
+| Sprint 3                 | 03/11/2025 | 23/11/2025 | 🔄     | -                                                |
+| Sprint review            | 24/11/2025 | 28/11/2025 | ❌      | -                                                |
+| Feira de Soluções        | 04/12/2025 | 04/12/2025 | ❌      | -                                                |
 
 ---
 
@@ -117,17 +117,66 @@ O objetivo do projeto é construir um sistema de monitoramento contínuo do trá
 
 ## 📊 <a id="indicadores-e-notas">Indicadores & Notas</a>
 
-**Indicadores propostos :**
-...
+### Sistema de Níveis
+O sistema utiliza uma escala de **1 a 5** para classificar o nível de tráfego por região:
+
+| **Nível** | **Cor** | **Descrição** | **Ação Requerida** |
+|:---------:|:-------:|:--------------|:-------------------|
+| 1 | 🟢 Verde | Tráfego fluindo normalmente | Monitoramento passivo |
+| 2 | 🟡 Amarelo | Tráfego lento, mas controlado | Atenção básica |
+| 3 | 🟠 Laranja | Congestionamento moderado | Monitoramento ativo |
+| 4 | 🔴 Vermelho | Congestionamento severo | **Alerta automático** |
+| 5 | 🟣 Roxo | Tráfego crítico/parado | **Emergência - Ação imediata** |
+
+
 ---
 
 ## 🚨 <a id="alertas-e-protocolos">Alertas & Protocolos</a>
 
-**Gatilhos de alerta**
-...
+### Gatilhos de Alerta
+Os alertas são disparados automaticamente quando:
 
-**Protocolos** (exemplo)
-...
+* **Nível 4 ou 5** é atingido em qualquer região
+* **Mudança súbita** de 2+ níveis em menos de 10 minutos
+
+
+### Canais de Notificação
+* 📱 **Telegram** - Mensagens diretas para gestores
+
+
+### Protocolos de Ação
+
+#### **Sistema de Responsabilidades**
+
+O sistema de notificações do Tráfegou funciona através de um modelo hierárquico de **cargos e regiões**:
+
+##### **🏢 Estrutura Organizacional**
+* **Cargos** podem ser criados e configurados conforme a necessidade da prefeitura
+* Cada **cargo** pode ser atribuído a **múltiplas regiões** da cidade
+* **Pessoas cadastradas** possuem um cargo específico
+* Cada pessoa recebe **atualizações sobre todas as regiões** do seu cargo
+
+##### **👥 Exemplos de Cargos e Responsabilidades**
+
+| **Cargo** | **Regiões de Atuação** | **Responsabilidades** |
+|:----------|:-----------------------|:----------------------|
+| **Coordenador Geral** | Todas as regiões | Supervisão geral, decisões estratégicas |
+| **Gestor Zona Norte** | Centro, Vila Industrial | Coordenação local, ações operacionais |
+| **Gestor Zona Sul** | Jardim das Colinas, Vila Adyana | Coordenação local, ações operacionais |
+| **Operador de Trânsito** | Regiões específicas | Ajustes de semáforos, orientação de tráfego |
+
+##### **📱 Fluxo de Notificações**
+1. **Sistema detecta** nível crítico (4 ou 5) em uma região
+2. **Identifica automaticamente** todos os cargos vinculados àquela região
+3. **Envia notificação via Telegram** para todas as pessoas desses cargos
+4. **Registra o alerta** no histórico do sistema
+5. **Monitora continuamente** até normalização
+
+##### **⚙️ Configuração Flexível**
+* Administradores podem **criar novos cargos** conforme necessário
+* **Vincular/desvincular regiões** a cargos existentes
+* **Cadastrar/editar pessoas** e seus respectivos cargos
+
 
 ---
 
@@ -138,6 +187,110 @@ O objetivo do projeto é construir um sistema de monitoramento contínuo do trá
 * **Regras de Cálculo** (fórmulas e pesos)
 * **Planejamento por Sprint** (objetivos e critérios de aceite)
 * **Burndown & Métricas de Entrega**
+
+---
+
+## 📋 <a id="boas-praticas">Boas Práticas</a>
+
+Para manter a qualidade e consistência do código, nossa equipe segue diretrizes específicas de desenvolvimento. Consulte o documento completo de boas práticas:
+
+📄 [**Boas Práticas de Desenvolvimento**](./Boas%20praticas.md)
+
+O documento inclui:
+* **Padrões de Commit** - Estrutura padronizada para mensagens de commit
+* **Templates para Pull Request** - Formato para revisões de código
+* **Orientações para Dailys** - Estrutura para reuniões diárias
+* **Organização de Cards no JIRA** - Padrões para gestão de tarefas
+
+---
+
+## 🏗️ <a id="arquitetura">Arquitetura do Sistema</a>
+
+### Visão Geral
+O **Tráfegou** é uma aplicação web completa com arquitetura em **três camadas**:
+
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Frontend      │    │   Backend       │    │   Banco de      │
+│   (Vue.js)      │◄──►│   (Spring Boot) │◄──►│   Dados         │
+│                 │    │                 │    │   (Oracle)      │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+```
+
+### Componentes Principais
+
+#### **Frontend (tms-client)**
+- **Framework**: Vue.js 3 com TypeScript
+- **Mapa Interativo**: Leaflet.js para visualização geográfica
+- **Gráficos**: Chart.js para dashboards
+
+#### **Backend (tms-server)**
+- **Framework**: Spring Boot 3 com Java 17
+- **API REST**: Endpoints para CRUD e consultas
+- **Scheduler**: Jobs automáticos para coleta de dados
+
+#### **Banco de Dados**
+- **SGBD**: Oracle Database
+- **Conexão**: Pool de conexões via HikariCP
+
+### Fluxo de Dados
+1. **Coleta** - Sistema consulta APIs externas a cada 2 minutos
+2. **Processamento** - Dados são validados e transformados
+3. **Cálculo** - Indicadores e níveis são recalculados
+4. **Armazenamento** - Resultados persistidos no banco
+5. **Exibição** - Frontend atualiza dashboards em tempo real
+6. **Alertas** - Sistema dispara notificações se necessário
+
+---
+
+## ⚙️ <a id="instalacao">Instalação e Execução</a>
+
+### Pré-requisitos
+- **Docker** e **Docker Compose**
+- **Java 17+** (para desenvolvimento)
+- **Node.js 18+** (para desenvolvimento)
+
+### 🚀 Execução com Docker (Recomendado)
+
+1. **Clone o repositório**
+```bash
+git clone https://github.com/seu-usuario/API4Semestre.git
+cd API4Semestre
+```
+
+2. **Execute o ambiente completo**
+```bash
+# Subir todos os serviços
+docker-compose up -d
+
+# Verificar logs
+docker-compose logs -f
+```
+
+3. **Acesse a aplicação**
+- **Frontend**: http://localhost:5173
+- **Backend API**: http://localhost:8080
+
+### 🛠️ Desenvolvimento Local
+
+#### **Backend**
+```bash
+cd tms-server/spring-app
+./mvnw spring-boot:run
+```
+
+#### **Frontend**
+```bash
+cd tms-client
+npm install
+npm run dev
+```
+
+### 🔧 Configuração do Banco
+
+O sistema utiliza **Oracle Database**. Configure as variáveis de ambiente
+
+##
 
 ---
 
@@ -153,7 +306,7 @@ O objetivo do projeto é construir um sistema de monitoramento contínuo do trá
 ### **Front-end**
 
 * **Vue.js 3**
-* 
+
 ### **Infra**
 
 * **Docker**
