@@ -14,6 +14,10 @@
 <details>
 <summary><a id="sprint-1">Sprint 1</a></summary>
 
+<div align="center">
+<img src="../assets/sprint1.gif" alt="Sprint 1 Demo" width="80%" />
+</div>
+
 ## User Stories da Sprint
 
 | Rank | Prioridade | User Story | Estimativa | Sprint | Requisito do parceiro |
@@ -176,7 +180,7 @@ Permitir que usuários usem o mapa de forma interativa e consigam entender melho
 ---
 
 | Rank | Prioridade | User Story | Estimativa | Sprint | Requisito do parceiro |
-|------|------------|------------|------------|--------|-----------------------|
+|------|------------|------------|-----------|--------|-----------------------|
 | 6 | ALTA | Como gestor, quero receber alertas automáticos quando níveis críticos forem atingidos, para reagir rapidamente a emergências. | - | 2 | - |
 
 ### Meta de Entrega
