@@ -7,7 +7,7 @@ Portal para consolidação de indicadores de mobilidade, atribui **níveis por r
 <br>
 <br><div style="display: flex; justify-content: center; gap: 80px; align-items: center; margin-top: 20px; margin-bottom: 20px;">
     <img src="./assets/SteamDucksLogo.png" alt="Logotipo Steam Ducks" width="40%">
-    <img src="./assets/bandeira-sjc.png" alt="Bandeira São José dos Campos" width="40%">
+    <img src="./assets/LogoTrafegou.png" alt="Logotipo Trafegou" width="40%">
 </div>
 
 <br>
