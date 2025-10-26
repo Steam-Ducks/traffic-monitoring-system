@@ -12,7 +12,11 @@
 # User Stories das Sprint
 
 <details>
-<summary>Sprint 1</summary>
+<summary><a id="sprint-1">Sprint 1</a></summary>
+
+<div align="center">
+<img src="../assets/sprint1.gif" alt="Sprint 1 Demo" width="80%" />
+</div>
 
 ## User Stories da Sprint
 
@@ -144,7 +148,11 @@ Permitir análise geográfica das condições de tráfego por região, facilitan
 
 
 <details>
-<summary>Sprint 2</summary>
+<summary><a id="sprint-2">Sprint 2</a></summary>
+
+<div align="center">
+<a href="https://youtu.be/R4ZZgUDnh1o" target="_blank">🎥 Veja o vídeo de demonstração </a>
+</div>
 
 ## User Stories da Sprint
 
@@ -176,7 +184,7 @@ Permitir que usuários usem o mapa de forma interativa e consigam entender melho
 ---
 
 | Rank | Prioridade | User Story | Estimativa | Sprint | Requisito do parceiro |
-|------|------------|------------|------------|--------|-----------------------|
+|------|------------|------------|-----------|--------|-----------------------|
 | 6 | ALTA | Como gestor, quero receber alertas automáticos quando níveis críticos forem atingidos, para reagir rapidamente a emergências. | - | 2 | - |
 
 ### Meta de Entrega
@@ -208,7 +216,7 @@ Permitir que gestores ajam rapidamente em situações críticas de tráfego, sem
 ---
 
 | Rank | Prioridade | User Story | Estimativa | Sprint | Requisito do parceiro |
-|------|------------|------------|------------|--------|-----------------------|
+|------|------------|------------|-----------|--------|-----------------------|
 | 7 | MÉDIA | Como Gestor, quero acessar uma seção de indicadores detalhados que compõem a nota geral e local, para entender o que está impactando o nível | 5 | 2 | RF2 |
 
 ### Meta de Entrega

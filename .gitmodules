@@ -1,0 +1,7 @@
+[submodule "tms-client"]
+	path = tms-client
+	url = https://github.com/Steam-Ducks/tms-client.git
+[submodule "tms-server"]
+	path = tms-server
+	url = https://github.com/Steam-Ducks/tms-server.git
+
