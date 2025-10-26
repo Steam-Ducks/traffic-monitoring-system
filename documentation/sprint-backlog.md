@@ -151,7 +151,7 @@ Permitir análise geográfica das condições de tráfego por região, facilitan
 <summary><a id="sprint-2">Sprint 2</a></summary>
 
 <div align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/R4ZZgUDnh1o" title="Sprint 2 Demo" frameborder="0" allowfullscreen></iframe>
+<a href="https://youtu.be/R4ZZgUDnh1o" target="_blank">🎥 Veja o vídeo de demonstração </a>
 </div>
 
 ## User Stories da Sprint
