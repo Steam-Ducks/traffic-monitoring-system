@@ -272,5 +272,134 @@ Permitir que administradores criem gestores locais que são designados a regiõe
 ---
 </details>
 
+<details>
+<summary><a id="sprint-3">Sprint 3</a></summary>
+
+## User Stories da Sprint
+
+| Rank | Prioridade | User Story | Estimativa | Sprint | Requisito do parceiro |
+|------|------------|------------|------------|--------|-----------------------|
+| 9 | MÉDIA | Como Gestor, quero visualizar quais são as ruas com o pior desempenho dentro de cada região para direcionar ações específicas | 8 | 3 | RF2 |
+
+### Meta de Entrega
+Permitir que gestores identifiquem as ruas mais problemáticas dentro de suas regiões para direcionar ações específicas de melhoria.
+
+### Indicadores
+- Lista das ruas com piores indicadores dentro da região selecionada.
+- Dados de desempenho de cada rua são exibidos claramente.
+- Interface permite fácil identificação das ruas prioritárias.
+
+### Regras de negócio
+- Ruas são ordenadas por nível de criticidade.
+- Dados são atualizados conforme novos dados das câmeras.
+- Visualização é específica para a região selecionada no mapa.
+
+### Definition of ready:
+- Dados de ruas individuais disponíveis por região.
+- Layout da lista de ruas definido.
+- Critérios de ordenação por criticidade estabelecidos.
+
+### Definition of done:
+- Lista exibe corretamente as ruas mais problemáticas.
+- Dados são atualizados automaticamente.
+- Interface permite fácil identificação das prioridades.
+- Lista mostra até 5 ruas por região.
+
+---
+
+| Rank | Prioridade | User Story | Estimativa | Sprint | Requisito do parceiro |
+|------|------------|------------|------------|--------|-----------------------|
+| 10 | MÉDIA | Como Gestor, quero marcar alertas como resolvidos após tomar ação, para poder acompanhar os acontecimentos ao longo do tempo | 8 | 3 | RF6 |
+
+### Meta de Entrega
+Permitir que gestores marquem alertas como resolvidos, criando um histórico de ações tomadas e facilitando o acompanhamento.
+
+### Indicadores
+- Gestores podem marcar alertas como resolvidos.
+- Histórico de alertas resolvidos é mantido.
+- Status dos alertas é claramente identificável.
+
+### Regras de negócio
+- Apenas gestores responsáveis pela região podem marcar alertas como resolvidos.
+- Alertas resolvidos mantêm histórico com timestamp da resolução.
+- Interface permite visualizar alertas pendentes e resolvidos separadamente.
+
+### Definition of ready:
+- Interface de gerenciamento de alertas definida.
+- Estrutura de dados para histórico de alertas.
+- Permissões de gestores por região implementadas.
+
+### Definition of done:
+- Gestores conseguem marcar alertas como resolvidos.
+- Histórico de alertas é mantido corretamente.
+- Interface distingue alertas pendentes de resolvidos.
+
+---
+
+| Rank | Prioridade | User Story | Estimativa | Sprint | Requisito do parceiro |
+|------|------------|------------|------------|--------|-----------------------|
+| 11 | BAIXA | Como Administrador, quero enriquecer os cálculos com dados externos para aumentar a precisão das análises de tráfego | 5 | 3 | RF5 |
+
+### Meta de Entrega
+Integrar dados meteorológicos em tempo real para melhorar a precisão dos cálculos de tráfego, considerando como condições climáticas impactam o fluxo de veículos.
+
+### Indicadores
+- Dados de clima (chuva, temperatura, vento) são incorporados nos cálculos dos indicadores.
+- Novo indicador "Impacto Climático" é criado e exibido no sistema.
+- Precisão dos níveis calculados é aumentada considerando condições meteorológicas.
+- Fonte dos dados climáticos é identificável no sistema.
+
+### Regras de negócio
+- Condições de chuva aumentam o peso dos indicadores de congestionamento.
+- Falha na API de clima não impede funcionamento do sistema.
+- Dados climáticos são atualizados a cada consulta das câmeras.
+
+### Definition of ready:
+- API de clima selecionada e respostas da situação do clima mapeadas.
+- Algoritmo de incorporação dos dados climáticos nos cálculos especificado.
+- Definição de como chuva, temperatura e vento afetam os indicadores de tráfego.
+- Layout do novo indicador "Impacto Climático" aprovado.
+
+### Definition of done:
+- API de clima é consumida corretamente a cada novo calculo, uma vez por região.
+- Novo indicador "Impacto Climático" é exibido na interface como um icone informativo.
+- Cálculos dos níveis refletem a influência das condições climáticas.
+- Sistema continua funcionando mesmo com falha na API de clima.
+
+---
+
+| Rank | Prioridade | User Story | Estimativa | Sprint | Requisito do parceiro |
+|------|------------|------------|------------|--------|-----------------------|
+| 12 | BAIXA | Como Gestor, quero visualizar facilmente se os indicadores estão melhorando / piorando em relação ao periodo anterior para entender se ações tomadas estão sendo efetivas | 3 | 3 | RF4 |
+
+### Meta de Entrega
+Fornecer aos gestores uma visualização clara da evolução dos indicadores ao longo do tempo para avaliar efetividade das ações.
+
+### Indicadores
+- Comparação visual entre períodos (atual vs anterior).
+- Tendência de melhoria ou piora é claramente identificável.
+- Dados históricos são utilizados para comparação.
+
+### Regras de negócio
+- Comparação é feita com período equivalente anterior.
+- Indicadores de tendência são visualmente distintos (cores, setas).
+- Dados são específicos de cada região.
+- Caso os valores sejam iguais ou muito próximos, setas não são exibidas.
+
+### Definition of ready:
+- Dados históricos suficientes para comparação.
+- Layout de visualização de tendências definido.
+- Critérios de comparação entre períodos estabelecidos.
+
+### Definition of done:
+- Interface exibe claramente tendências de melhoria/piora.
+- Comparações são precisas com dados históricos.
+- Visualização é intuitiva e fácil de interpretar.
+
+---
+
+</details>
+
 </body>
 </html>
+
