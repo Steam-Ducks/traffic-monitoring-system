@@ -364,7 +364,7 @@ Integrar dados meteorológicos em tempo real para melhorar a precisão dos cálc
 - API de clima é consumida corretamente a cada novo calculo, uma vez por região.
 - Novo indicador "Impacto Climático" é exibido na interface como um icone informativo.
 - Cálculos dos níveis refletem a influência das condições climáticas.
-- Sistema continua funcionando mesmo com falha na API de clima.
+- Sistema continua a funcionar mesmo com falha na API de clima.
 
 ---
 

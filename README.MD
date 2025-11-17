@@ -127,6 +127,18 @@ O sistema utiliza uma escala de **1 a 5** para classificar o nível de tráfego 
 | 4 | 🔴 Vermelho | Congestionamento severo | **Alerta automático** |
 | 5 | 🟣 Roxo | Tráfego crítico/parado | **Emergência - Ação imediata** |
 
+### Detalhamento dos Cálculos
+
+Para entender como os níveis são calculados, consulte a documentação completa dos indicadores:
+
+📊 [**Cálculo dos Indicadores de Tráfego**](./documentation/calculo-indicadores.md)
+
+O documento inclui:
+* **4 Indicadores principais** (Velocidade Média, Taxa de Conformidade, Densidade de Tráfego, Condições Climáticas)
+* **Fórmulas detalhadas** de cada cálculo
+* **Pesos e ponderações** utilizados
+* **Thresholds de categorização** para cada nível
+
 
 ---
 
@@ -181,11 +193,12 @@ O sistema de notificações do Tráfegou funciona através de um modelo hierárq
 
 ## 📃 <a id="documentacao">Documentação</a>
 
-* **Manual do Usuário**
-* **Dados CSV**
-* **Regras de Cálculo** (fórmulas e pesos)
-* **Planejamento por Sprint** (objetivos e critérios de aceite)
-* **Burndown & Métricas de Entrega**
+* 📊 [**Cálculo dos Indicadores de Tráfego**](./documentation/calculo-indicadores.md) - Detalhamento completo das fórmulas, pesos e categorização
+* 📋 [**Backlog das Sprints**](./documentation/sprint-backlog.md) - Planejamento e objetivos de cada sprint
+* 📄 [**Boas Práticas de Desenvolvimento**](./Boas%20praticas.md) - Padrões de código e organização
+* **Manual do Usuário** - Guia de utilização do sistema
+* **Dados CSV** - Estrutura e formato dos dados de entrada
+* **Burndown & Métricas de Entrega** - Acompanhamento do progresso
 
 ---
 
