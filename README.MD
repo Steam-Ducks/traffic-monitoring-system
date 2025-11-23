@@ -67,10 +67,10 @@ O objetivo do projeto é construir um sistema de monitoramento contínuo do trá
 | Sprint 1                 | 08/09/2025 | 28/09/2025 | ✅      | [📋 Sprint 1](./documentation/sprint-backlog.md#sprint-1) |
 | Sprint Review / Planning | 29/09/2025 | 03/10/2025 | ✅      | -                                                         |
 | Sprint 2                 | 06/10/2025 | 26/10/2025 | ✅      | [📋 Sprint 2](./documentation/sprint-backlog.md#sprint-2) |
-| Sprint Review / Planning | 27/10/2025 | 31/10/2025 | 🔄      | -                                                         |
-| Sprint 3                 | 03/11/2025 | 23/11/2025 | 🔄     | [📋 Sprint 3](./documentation/sprint-backlog.md#sprint-3) |
-| Sprint review            | 24/11/2025 | 28/11/2025 | ❌      | -                                                         |
-| Feira de Soluções        | 04/12/2025 | 04/12/2025 | ❌      | -                                                         |
+| Sprint Review / Planning | 27/10/2025 | 31/10/2025 | ✅      | -                                                         |
+| Sprint 3                 | 03/11/2025 | 23/11/2025 | ✅     | [📋 Sprint 3](./documentation/sprint-backlog.md#sprint-3) |
+| Sprint review            | 24/11/2025 | 28/11/2025 | 🔄      | -                                                         |
+| Feira de Soluções        | 04/12/2025 | 04/12/2025 | 🔄      | -                                                         |
 
 ---
 
@@ -86,10 +86,10 @@ O objetivo do projeto é construir um sistema de monitoramento contínuo do trá
 |    6     |      Alta      | Como Gestor, quero receber alertas automáticos via sistema quando níveis críticos são atingidos para reagir rapidamente a emergências                                     |        8         |     2      |      RF6      |     ✅     |
 |    7     |     Média      | Como Gestor, quero acessar uma seção de indicadores detalhados que compõem a nota geral e local, para entender o que está impactando o nível                              |        5         |     2      |      RF2      |     ✅     |
 |    8     |     Média      | Como Administrador, quero cadastrar gestores locais no sistema e atribuí-los a regiões específicas para distribuir responsabilidades de monitoramento                     |        5         |     2      |      RF6      |     ✅     |
-|    9     |     Média      | Como Gestor, quero visualizar quais são as ruas com o pior desempenho dentro de cada região para direcionar ações específicas                                            |        8         |     3      |      RF2      |     🔄     |
-|    10    |     Média      | Como Gestor, quero marcar alertas como resolvidos após tomar ação, para poder acompanhar os acontecimentos ao longo do tempo                                              |        8         |     3      |      RF6      |     🔄     |
-|    11    |     Baixa      | Como Administrador, quero enriquecer os cálculos com dados externos para aumentar a precisão das análises de tráfego.                                                       |        5         |     3      |      RF5      |     🔄     |
-|    12    |     Baixa      | Como Gestor, quero visualizar facilmente se os indicadores estão melhorando / piorando em relação ao periodo anterior para entender se ações tomadas estão sendo efetivas |        3         |     3      |      RF4      |     🔄     |
+|    9     |     Média      | Como Gestor, quero visualizar quais são as ruas com o pior desempenho dentro de cada região para direcionar ações específicas                                            |        8         |     3      |      RF2      |     ✅     |
+|    10    |     Média      | Como Gestor, quero marcar alertas como resolvidos após tomar ação, para poder acompanhar os acontecimentos ao longo do tempo                                              |        8         |     3      |      RF6      |     ✅     |
+|    11    |     Baixa      | Como Administrador, quero enriquecer os cálculos com dados externos para aumentar a precisão das análises de tráfego.                                                       |        5         |     3      |      RF5      |     ✅     |
+|    12    |     Baixa      | Como Gestor, quero visualizar facilmente se os indicadores estão melhorando / piorando em relação ao periodo anterior para entender se ações tomadas estão sendo efetivas |        3         |     3      |      RF4      |     ✅     |
 
 
 ---
