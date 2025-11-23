@@ -61,36 +61,35 @@ O objetivo do projeto é construir um sistema de monitoramento contínuo do trá
 
 ## 📆 <a id="cronograma">Cronograma</a>
 
-| Fase                     | Início     | Entrega    | Status | Documentação                                     |
-|--------------------------|------------|------------|--------|--------------------------------------------------| 
-| Kick off                 | 25/08/2025 | 29/08/2025 | ✅      | -                                                |
+| Fase                     | Início     | Entrega    | Status | Documentação                                              |
+|--------------------------|------------|------------|--------|-----------------------------------------------------------| 
+| Kick off                 | 25/08/2025 | 29/08/2025 | ✅      | -                                                         |
 | Sprint 1                 | 08/09/2025 | 28/09/2025 | ✅      | [📋 Sprint 1](./documentation/sprint-backlog.md#sprint-1) |
-| Sprint Review / Planning | 29/09/2025 | 03/10/2025 | ✅      | -                                                |
+| Sprint Review / Planning | 29/09/2025 | 03/10/2025 | ✅      | -                                                         |
 | Sprint 2                 | 06/10/2025 | 26/10/2025 | ✅      | [📋 Sprint 2](./documentation/sprint-backlog.md#sprint-2) |
-| Sprint Review / Planning | 27/10/2025 | 31/10/2025 | 🔄      | -                                                |
-| Sprint 3                 | 03/11/2025 | 23/11/2025 | 🔄     | -                                                |
-| Sprint review            | 24/11/2025 | 28/11/2025 | ❌      | -                                                |
-| Feira de Soluções        | 04/12/2025 | 04/12/2025 | ❌      | -                                                |
+| Sprint Review / Planning | 27/10/2025 | 31/10/2025 | ✅      | -                                                         |
+| Sprint 3                 | 03/11/2025 | 23/11/2025 | ✅     | [📋 Sprint 3](./documentation/sprint-backlog.md#sprint-3) |
+| Sprint review            | 24/11/2025 | 28/11/2025 | 🔄      | -                                                         |
+| Feira de Soluções        | 04/12/2025 | 04/12/2025 | 🔄      | -                                                         |
 
 ---
 
 ## 🗂️ <a id="backlog-do-produto">Backlog do Produto</a>
 
-| **Rank** | **Prioridade** | **User Story**                                                                                                                                        | **Story Points** | **Sprint** | **Requisito** | **Status** |
-|:--------:|:--------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------:|:----------:|:-------------:|:----------:|
-|    1     |      Alta      | Como Administrador, quero que o sistema consulte novos dados a cada 10 minutos para que sejam exibidos os dados mais recentes                         |        8         |     1      |      RF1      |     ✅     |
-|    2     |      Alta      | Como Gestor, quero visualizar o índice geral da cidade em um card destacado com cores de alerta para ter uma visão rápida da situação do tráfego      |        8         |     1      |    RF2,RF3    |     ✅     |
-|    3     |      Alta      | Como Gestor, quero visualizar cards individuais das minhas regiões com níveis atualizados para identificar rapidamente áreas problemáticas            |        5         |     1      |    RF3,RF4    |     ✅     |
-|    4     |      Alta      | Como Gestor, quero visualizar um mapa básico da cidade com regiões coloridas conforme níveis para análise geográfica                                  |        8         |     1      |      RF4      |     ✅     |
-|    5     |      Alta      | Como Gestor, quero poder interagir com o mapa aplicando filtros por região para analisar localidades com mais precisão                                |        8         |     2      |      RF4      |     ✅      |
-|    6     |      Alta      | Como Gestor, quero receber alertas automáticos via sistema quando níveis críticos são atingidos para reagir rapidamente a emergências                 |        8         |     2      |      RF6      |     ✅      |
-|    7     |     Média      | Como Gestor, quero acessar uma seção de indicadores detalhados que compõem a nota geral e local, para entender o que está impactando o nível          |        5         |     2      |      RF2      |     ✅      |
-|    8     |     Média      | Como Administrador, quero cadastrar gestores locais no sistema e atribuí-los a regiões específicas para distribuir responsabilidades de monitoramento |        5         |     2      |      RF6      |     ✅      |
-|    9     |     Média      | Como Administrador, quero configurar regras de alerta personalizadas por indicador e região para automatizar notificações críticas                    |        8         |     3      |      RF6      |     🔄      |
-|    10    |     Média      | Como Gestor, quero visualizar facilmente se os indicadores estão melhorando / piorando em relação ao periodo anterior                                 |        5         |     3      |      RF4      |     🔄      |
-|    11    |     Baixa      | Como Administrador, quero permitir a integração de dados externos para enriquecer análises com dados complementares                                   |        5         |     3      |      RF5      |     🔄      |
-|    12    |     Baixa      | Como Cidadão, quero acessar um portal público com mapa simplificado e índice geral da cidade sem login para acompanhar a situação do tráfego          |        3         |     3      |      RF4      |     🔄      |
-|    13    |     Baixa      | Como Administrador, quero gerenciar usuários do sistema (criar, editar, desativar) para controlar quem tem acesso às funcionalidades                  |        5         |     3      |      RF6      |     🔄      |
+| **Rank** | **Prioridade** | **User Story**                                                                                                                                                            | **Story Points** | **Sprint** | **Requisito** | **Status** |
+|:--------:|:--------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------:|:----------:|:-------------:|:---------:|
+|    1     |      Alta      | Como Administrador, quero que o sistema consulte novos dados a cada 10 minutos para que sejam exibidos os dados mais recentes                                             |        8         |     1      |      RF1      |     ✅     |
+|    2     |      Alta      | Como Gestor, quero visualizar o índice geral da cidade em um card destacado com cores de alerta para ter uma visão rápida da situação do tráfego                          |        8         |     1      |    RF2,RF3    |     ✅     |
+|    3     |      Alta      | Como Gestor, quero visualizar cards individuais das minhas regiões com níveis atualizados para identificar rapidamente áreas problemáticas                                |        5         |     1      |    RF3,RF4    |     ✅     |
+|    4     |      Alta      | Como Gestor, quero visualizar um mapa básico da cidade com regiões coloridas conforme níveis para análise geográfica                                                      |        8         |     1      |      RF4      |     ✅     |
+|    5     |      Alta      | Como Gestor, quero poder interagir com o mapa aplicando filtros por região para analisar localidades com mais precisão                                                    |        8         |     2      |      RF4      |     ✅     |
+|    6     |      Alta      | Como Gestor, quero receber alertas automáticos via sistema quando níveis críticos são atingidos para reagir rapidamente a emergências                                     |        8         |     2      |      RF6      |     ✅     |
+|    7     |     Média      | Como Gestor, quero acessar uma seção de indicadores detalhados que compõem a nota geral e local, para entender o que está impactando o nível                              |        5         |     2      |      RF2      |     ✅     |
+|    8     |     Média      | Como Administrador, quero cadastrar gestores locais no sistema e atribuí-los a regiões específicas para distribuir responsabilidades de monitoramento                     |        5         |     2      |      RF6      |     ✅     |
+|    9     |     Média      | Como Gestor, quero visualizar quais são as ruas com o pior desempenho dentro de cada região para direcionar ações específicas                                            |        8         |     3      |      RF2      |     ✅     |
+|    10    |     Média      | Como Gestor, quero marcar alertas como resolvidos após tomar ação, para poder acompanhar os acontecimentos ao longo do tempo                                              |        8         |     3      |      RF6      |     ✅     |
+|    11    |     Baixa      | Como Administrador, quero enriquecer os cálculos com dados externos para aumentar a precisão das análises de tráfego.                                                       |        5         |     3      |      RF5      |     ✅     |
+|    12    |     Baixa      | Como Gestor, quero visualizar facilmente se os indicadores estão melhorando / piorando em relação ao periodo anterior para entender se ações tomadas estão sendo efetivas |        3         |     3      |      RF4      |     ✅     |
 
 
 ---
@@ -127,6 +126,18 @@ O sistema utiliza uma escala de **1 a 5** para classificar o nível de tráfego 
 | 3 | 🟠 Laranja | Congestionamento moderado | Monitoramento ativo |
 | 4 | 🔴 Vermelho | Congestionamento severo | **Alerta automático** |
 | 5 | 🟣 Roxo | Tráfego crítico/parado | **Emergência - Ação imediata** |
+
+### Detalhamento dos Cálculos
+
+Para entender como os níveis são calculados, consulte a documentação completa dos indicadores:
+
+📊 [**Cálculo dos Indicadores de Tráfego**](./documentation/calculo-indicadores.md)
+
+O documento inclui:
+* **4 Indicadores principais** (Velocidade Média, Taxa de Conformidade, Densidade de Tráfego, Condições Climáticas)
+* **Fórmulas detalhadas** de cada cálculo
+* **Pesos e ponderações** utilizados
+* **Thresholds de categorização** para cada nível
 
 
 ---
@@ -182,11 +193,12 @@ O sistema de notificações do Tráfegou funciona através de um modelo hierárq
 
 ## 📃 <a id="documentacao">Documentação</a>
 
-* **Manual do Usuário**
-* **Dados CSV**
-* **Regras de Cálculo** (fórmulas e pesos)
-* **Planejamento por Sprint** (objetivos e critérios de aceite)
-* **Burndown & Métricas de Entrega**
+* 📊 [**Cálculo dos Indicadores de Tráfego**](./documentation/calculo-indicadores.md) - Detalhamento completo das fórmulas, pesos e categorização
+* 📋 [**Backlog das Sprints**](./documentation/sprint-backlog.md) - Planejamento e objetivos de cada sprint
+* 📄 [**Boas Práticas de Desenvolvimento**](./Boas%20praticas.md) - Padrões de código e organização
+* **Manual do Usuário** - Guia de utilização do sistema
+* **Dados CSV** - Estrutura e formato dos dados de entrada
+* **Burndown & Métricas de Entrega** - Acompanhamento do progresso
 
 ---
 
